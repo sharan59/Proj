@@ -1,0 +1,39 @@
+
+
+<body>
+
+        <div class="tbl-header">
+                <p id="n">Name : Sai Sharath
+                   phoneNo : 9548565655
+              
+              
+                </p>
+		
+		<table id="items"> 
+		
+			<tr class="item-row">
+				<th>COURSE SELECTED </th>
+				<th>COURSE COST</th>  
+			
+			  </tr>
+			  <tr *ngFor="let i of data" class="item-row">
+                
+			  <td class="item-name" >{{i.COURSESELECTED}}<input type='button' class='myclass' (click)='delete()' value="X"></td>
+			  <td class="item-name">{{i.COURSECOST}}</td> 
+			  
+              <tr>
+        
+                    <td  class="total-line" id="t" >Total</td>
+                    <td id="t">35k</td>
+                </tr>
+		
+		</table>
+        <input type='button' class='bu' value="Proceed To Pay" >
+		
+	
+	</div>
+	
+	
+
+</body>
+

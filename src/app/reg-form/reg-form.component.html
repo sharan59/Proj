@@ -1,0 +1,273 @@
+<!-- <body>
+    
+    <div class="topnav" id="myTopnav">
+    
+        <h1> <img class="logo-img" ></h1>
+
+        <a href="#contact">Home</a>3
+
+    </div> -->
+
+    <body>
+
+<h1>Registration Form</h1>
+
+
+<div class="user">
+<form class="form" #pageref = 'ngForm' (ngSubmit) = 'onsubmit(pageref.value)' >
+<div class="form__group">
+    
+  <input type="text" placeholder="FirstName" class="form__input" ngModel required
+  minlength="5" maxlength="30" pattern="[a-zA-Z]+" name = "firstName" #firstName="ngModel" >
+
+  <div *ngIf="firstName.errors && (firstName.dirty || firstName.touched)" class="alert alert-danger">
+      <div [hidden]="!firstName.errors.required">
+         <p id="er"> Firstname is required! </p>
+      </div>
+      <div [hidden]="!firstName.errors.minlength">
+            <p id="er"> FirstName must be at least 5 characters long.</p>
+      </div>
+      <div [hidden]="!firstName.errors.maxlength">
+            <p id="er">FirstName cannot be more than 30 characters long.</p>
+      </div>
+      <div [hidden]="!firstName.errors.pattern">
+            <p id="er">numbers are not valid in name</p>
+        </div>
+      </div>
+</div>
+
+
+<div class="form__group">
+  
+  <input type="text" class="form__input" placeholder="LastName" ngModel required
+  minlength="5" maxlength="30" pattern="[a-zA-Z]+" name = "lastName" #lastName="ngModel">
+
+  <div *ngIf="lastName.errors && (lastName.dirty || lastName.touched)" class="alert alert-danger">
+      <div [hidden]="!lastName.errors.required">
+            <p id="er">LastName is required!</p>
+      </div>
+      <div [hidden]="!lastName.errors.minlength">
+            <p id="er"> LastName must be at least 5 characters long.</p>
+      </div>
+      <div [hidden]="!lastName.errors.maxlength">
+            <p id="er">LastName cannot be more than 30 characters long.</p>
+      </div>
+      <div [hidden]="!lastName.errors.pattern">
+            <p id="er"> numbers are not valid in name</p>   
+            </div>
+      </div>
+</div>
+<br>
+
+<div class="form__gender">         
+<div>
+        <label>Gender : </label>
+    <input class="radio-input" type="radio" name="Gender" ngModel value="Male" required #genderControl = 'ngModel' />
+    <label class="radio-label">Male</label>
+    <input class="radio-input" type="radio" name="Gender" ngModel value="Female " />
+    <label class="radio-label">Female</label>
+</div>
+</div>
+
+
+  <div class="form__group">
+  
+    <input type="text" class="form__input" placeholder="FatherName" name = "fatherName" ngModel required
+    minlength="5" maxlength="30" pattern="[a-zA-Z]+" #fatherName="ngModel">
+  
+    <div *ngIf="fatherName.errors && (fatherName.dirty || fatherName.touched)" class="alert alert-danger">
+        <div [hidden]="!fatherName.errors.required">
+                <p id="er"> FatherName is required!</p>
+        </div>
+        <div [hidden]="!fatherName.errors.minlength">
+                <p id="er"> FatherName must be at least 5 characters long.</p>
+        </div>
+        <div [hidden]="!fatherName.errors.maxlength">
+                <p id="er"> FatherName cannot be more than 30 characters long.</p>
+        </div>
+        <div [hidden]="!fatherName.errors.pattern">
+                <p id="er">   numbers are not valid in name</p>
+        </div>
+        </div>
+  </div>
+  
+
+  <div class="form__group">
+  
+    <input type="text" class="form__input" placeholder="Address" name = "Address" ngModel required
+    minlength="5" maxlength="30" #Address="ngModel">
+  
+    <div *ngIf="Address.errors && (Address.dirty || Address.touched)" class="alert alert-danger">
+        <div [hidden]="!Address.errors.required">
+                <p id="er">Address is required!</p>
+        </div>
+        <div [hidden]="!Address.errors.minlength">
+                <p id="er">Address must be at least 5 characters long.</p>
+        </div>
+        <div [hidden]="!Address.errors.maxlength">
+                <p id="er"> Address cannot be more than 30 characters long.</p>
+        </div>
+        </div>
+  </div>
+  
+
+  <div class="form__group">
+  
+    <input type ="text" class="form__input" placeholder="PhoneNumber" name = "PhoneNumber" ngModel required
+    minlength="10" maxlength="10" #PhoneNumber="ngModel" pattern="^[789]\d{9}$">
+  
+    <div *ngIf="PhoneNumber.errors && (PhoneNumber.dirty || PhoneNumber.touched)" class="alert alert-danger">
+        <div [hidden]="!PhoneNumber.errors.required">
+                <p id="er">PhoneNumber is required!</p>
+        </div>
+        <div [hidden]="!PhoneNumber.errors.maxlength">
+                <p id="er"> PhoneNumber must be at of least 10 numbers.</p>
+        </div>
+        <div [hidden]="!PhoneNumber.errors.pattern">
+                <p id="er">Mobile numberr should be in correct pattern</p>               
+                </div>
+        </div>
+  </div>
+  <br>
+<!--   
+  <div class="form__select">
+      <label> Country :</label>
+  <select>
+	<option >India</option>
+	<option >Iceland</option>
+	<option >Japan</option>
+	<option >Russia</option>
+    <option >America</option>
+  </select>
+  </div> -->
+
+  <div class="form__group">
+  
+    <input type="text" class="form__input" placeholder="Email" name = "Email" ngModel required
+    minlength="5" maxlength="30" #Email="ngModel" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+  
+    <div *ngIf="Email.errors && (Email.dirty || Email.touched)" class="alert alert-danger">
+        <div [hidden]="!Email.errors.required">
+                <p id="er"> Email is required!</p>
+        </div>
+        <div [hidden]="!Email.errors.pattern">
+                <p id="er"> Email must be in correct pattern!</p>
+        </div>
+      
+        </div>
+  </div>
+  
+
+  <div class="form__group">
+    <input type="password" #Pwd = 'ngModel' placeholder="Password" class="form__input" [(ngModel)]='Password' required
+    minlength="5" maxlength="12" name = "Password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" ngModel>
+  
+    <div *ngIf="Pwd.errors && (Pwd.dirty || Pwd.touched)" class="alert alert-danger">
+        <div [hidden]="!Pwd.errors.required">
+                <p id="er"> Password is required!</p>
+        </div>
+        <div [hidden]="!Pwd.errors.minlength">/7
+                <p id="er"> Password must be at least 5 characters long.</p>
+        </div>
+        <div [hidden]="!Pwd.errors.pattern">
+                <p id="er"> Password is not in correct patteren </p>
+        </div>
+        </div>
+  </div>
+  
+
+  <div class="form__group">
+    <input type="password" #ConPassword = 'ngModel' placeholder="ConfirmPassword" class="form__input" [(ngModel)]='ConfirmPassword' required
+    minlength="5" maxlength="12" (input)='validate()' name = "ConfirmPassword" ngModel>
+  
+    <div *ngIf="ConPassword.errors && (ConPassword.dirty || ConPassword.touched)" class="alert alert-danger">
+        <div [hidden]="!ConPassword.errors.required">
+                <p id="er">  Password is required!</p>
+        </div>
+        <div [hidden]="!ConPassword.errors.minlength">
+                <p id="er"> Password must be at least 5 characters long.</p>
+        </div>
+        </div>
+  </div>
+
+
+<div *ngIf='x'>
+ <p id="er">  password matched</p>
+</div>
+<div *ngIf='y'>
+ <p id="er"> password not matched!!</p>
+</div>
+
+  <div class="form__group">
+    <input type="text" placeholder="AadharNumber" class="form__input" ngModel required
+    minlength="12" maxlength="12" name = "AadharNumber" pattern="" #AadharNumber="ngModel">
+  
+    <div *ngIf="AadharNumber.errors && (AadharNumber.dirty || AadharNumber.touched)" class="alert alert-danger">
+        <div [hidden]="!AadharNumber.errors.required">
+                <p id="er">AadharNumber is required!</p>
+        </div>
+        <div [hidden]="!AadharNumber.errors.minlength">
+                <p id="er"> AadharNumber must be at least 12 characters long.</p>
+        </div>
+        <div [hidden]="!AadharNumber.errors.pattern">
+                <p id="er">AadharNumber  should be in correct pattern</p>               
+                </div>
+        </div>
+  </div>
+  <br> 
+
+  <div align ="center">
+   <input type="submit" class="btn" [disabled]="pageref.form.invalid">
+       Already Registered <a [routerLink] = "['/login']">Login Here</a>
+</div>
+
+</form>
+
+</div>
+
+
+</body>
+
+<br>
+<!-- 
+<table style="width:50%">
+  <tr>
+    <th>FirstName </th>
+    <th>LastName </th>  
+    <th>FatherName </th>
+    <th>Address </th>
+    <th>PhoneNumber </th>
+    <th>EmailId </th>
+    <th>AadharNumber </th>
+  </tr>
+  <tr *ngFor="let reg of details">  
+  <td>{{reg.firstName}}</td>
+  <td>{{reg.lastName }}</td> 
+  <td>{{reg.fatherName}}</td>
+  <td>{{reg.Address}}</td>
+  <td>{{reg.PhoneNumber}}</td>
+  <td>{{reg.Email}}</td>
+  <td>{{reg.AadharNumber}}</td> -->
+
+  <!-- </table> -->
+  <br>
+  <router-outlet></router-outlet>
+
+<!-- 
+        (click)= "addemp(firstName.value,lastName.value,fatherName.value,Address.value,PhoneNumber.value,Email.value,AadharNumber.value
+<div class="form-group">
+    <label>Gender</label>
+  </div>
+  <div class="radio">
+    <label>
+      <input type="radio" name="gender" value="Male" ngModel>
+      Male
+    </label>
+  </div>
+  <div class="radio">
+    <label>
+      <input type="radio" name="gender" value="Female" ngModel>
+      Female
+    </label>
+  </div> -->
+  

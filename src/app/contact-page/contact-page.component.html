@@ -1,0 +1,97 @@
+
+  <div class="nb">
+
+    <h1>CONTACT US</h1><br>
+
+  
+
+  
+
+
+<div class="container">
+
+    <h3>WRITE HERE</h3>
+
+  <form #contactref = 'ngForm' (ngSubmit) = 'onsubmit(contactref.value)'>
+   
+    <img class="img">
+
+    <input type="text" id="name" name="name" placeholder="Your name.." ngModel required
+      minlength="5" maxlength="30" pattern="[a-zA-Z]+" name = "Name" #Name="ngModel">
+      <div *ngIf="Name.errors && (Name.dirty || Name.touched)" class="alert alert-danger">
+          <div [hidden]="!Name.errors.required">
+              Name is required!
+          </div>
+          <div [hidden]="!Name.errors.minlength">
+              Name must be at least 5 characters long.
+          </div>
+          <div [hidden]="!Name.errors.maxlength">
+              Name cannot be more than 30 characters long.
+          </div>
+          <div [hidden]="!Name.errors.pattern">numbers are not valid in name</div>
+          </div>
+
+
+
+    <input type="text" id="email" name="email" placeholder="Your Email.." ngModel required
+    minlength="5" maxlength="30" #Email="ngModel" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+    <div *ngIf="Email.errors && (Email.dirty || Email.touched)" class="alert alert-danger">
+        <div [hidden]="!Email.errors.required">
+            Email is required!
+        </div>
+        <div [hidden]="!Email.errors.pattern">
+            Email must be in correct pattern!
+        </div>
+      
+        </div>     
+
+    <input type="number" id="phone" name="phone" placeholder="Your PhoneNo.." ngModel required
+    minlength="10" maxlength="10" #PhoneNumber="ngModel" pattern="^[789]\d{9}$">
+
+    <div *ngIf="PhoneNumber.errors && (PhoneNumber.dirty || PhoneNumber.touched)" class="alert alert-danger">
+        <div [hidden]="!PhoneNumber.errors.required">
+            PhoneNumber is required!
+        </div>
+        <div [hidden]="!PhoneNumber.errors.maxlength">
+            PhoneNumber must be at of least 10 numbers.
+        </div>
+        <div [hidden]="!PhoneNumber.errors.pattern">Mobile number should be in correct pattern</div>
+        </div>
+
+    <input type="text" id="gc" name="gc" placeholder="Good Time To Contact">
+
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+
+<section class="addr">
+
+<div class="Add1">
+  
+  <h3>Address 1</h3>
+  <p>Address : Second Campus Learning Solutions,
+    Beyond Data Technology Incubator,
+    C.R.RAO AIMSCS; University of Hyderabad Campus
+    Gachibowli, Hyderabad, India</p>
+  <p>PhoneNo : +91-897874 7700</p>  
+  <p>Email Id : hr@secondcampus.in</p>
+
+</div>
+
+<div class="Add2">
+  
+    <h3>Address 2</h3>
+    <p>Address : Second Campus Learning Solutions
+        #77, 1st Floor, Subhodaya Colony, Alwyan pipeline road,
+        Kukatpalli, Hyderabad</p>
+    <p>PhoneNo : +91-897874 7700</p>  
+    <p>Email Id : hr@secondcampus.in</p>
+  
+  </div>
+  
+
+</section>
+
+</div>

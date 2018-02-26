@@ -1,0 +1,48 @@
+
+<div class="nb">
+
+    <h1>Login Page</h1><br>
+<div class="log">
+  <form class="form"  #logref = 'ngForm' (ngSubmit) = 'onsubmit(logref.value)'>
+<div class="form__group">
+  
+  <input type="text" class="form__input" placeholder="Email" name = "Email" ngModel required
+  minlength="5" maxlength="30" #Email="ngModel" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+
+  <div *ngIf="Email.errors && (Email.dirty || Email.touched)" class="alert alert-danger">
+      <div [hidden]="!Email.errors.required">
+         <p> Email is required! </p>
+      </div>
+      <div [hidden]="!Email.errors.pattern">
+         <p> Email must be in correct pattern! </p>
+      </div>
+    
+      </div>
+</div>
+
+<div class="form__group">
+  <input type="password" placeholder="Password" class="form__input" ngModel required
+  minlength="5" maxlength="12" name = "Password" #Password="ngModel">
+
+  <div *ngIf="Password.errors && (Password.dirty || Password.touched)" class="alert alert-danger">
+      <div [hidden]="!Password.errors.required">
+         <p> Password is required!</p>
+      </div>
+      <div [hidden]="!Password.errors.minlength">
+          <p>Password must be at least 5 characters long.</p>
+      </div>
+      </div>
+</div>
+
+<div align ="center">
+<button class="btn" type="submit" >Login</button>
+Not Registered? <a [routerLink] = "['/register']">Register Here</a>
+
+</div>
+
+</form>
+</div>
+
+</div>
+
+<router-outlet></router-outlet>

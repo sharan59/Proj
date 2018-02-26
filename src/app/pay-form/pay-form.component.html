@@ -1,0 +1,55 @@
+
+
+<body>
+
+	<div id="page-wrap">
+
+    <textarea id="header">CHECKOUT</textarea>
+    
+
+		
+		<div id="identity">
+		
+            <textarea id="address">Sai Sharath
+            Phone: 9554562854</textarea>
+
+		
+		</div>
+		
+		<div style="clear:both"></div>
+		
+		<div id="customer">
+
+
+            <table id="meta">
+                <tr>
+
+                    <td class="meta-head">Date</td>
+                    <td><textarea id="date">December 15, 2009</textarea></td>
+                </tr>
+
+            </table>
+		
+		</div>
+		
+		<table id="items">
+		
+			<tr>
+				<th>COURSE SELECTED</th>
+				<th>COURSE COST</th>  
+			
+			  </tr>
+			  <tr *ngFor="let i of data">  
+			  <td>{{i.COURSESELECTED}}</td>
+			  <td>{{i.COURSECOST}}</td> 
+			  
+			
+		
+		</table>
+		
+		
+	
+	</div>
+	
+</body>
+

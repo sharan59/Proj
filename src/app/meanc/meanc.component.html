@@ -1,0 +1,62 @@
+<div>
+  <li *ngFor = 'let i of data'>
+  
+  <p id="one">
+    Course Name : {{i.coursename}}
+  </p>
+  <p id="two">
+    Course Duration : 20-01-2018 To 20-03-2018
+  </p>
+  
+  <p id="five">
+  Course Handeled : {{i.faculty}}
+  </p>
+  <p id="three">
+    
+     Course Topics : {{i.coursedisc}}
+  </p>
+  
+  <p id="four">Course Fee : {{i.coursefee}}</p>
+  </li>
+  
+  <button class="button" [routerLink] = "['/payment']"><span>Add Course </span></button>
+  </div>
+  
+
+
+
+
+
+<!-- <div>
+  <p id="one">
+    Course Name : MEAN
+  </p>
+  <p id="two">
+    Course Duration : 30-01-2018 To 25-03-2018
+  </p>
+  
+  <p id="five">
+  Course Handeled :  L.Naresh Reddy
+  </p>
+  <p id="three">
+    
+     Course Topics : OOPs Concepts
+      Abstract Classes and Interfaces
+      Constructors
+      Overloading and Overriding
+      File IO and Serialization
+      Collections - List , Map , Set - Search, Sorting Algorithms
+      Access Specifiers
+      Exceptions - Checked , Unchecked
+      Generics
+      Java Keywords - static , final , volatile, synchronized , transient, this , super etc.
+      JVM and Memory Management
+      MultiThreading and Synchronization
+      HashCode and Equals
+  </p>
+  
+  <p id="four">Course Fee : 20000/- </p>
+
+  <button class="button" [routerLink] = "['/payment']"><span>Add Course </span></button>
+  </div>
+   -->

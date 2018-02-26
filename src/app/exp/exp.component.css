@@ -1,0 +1,149 @@
+.topnav {
+    background-color: rgb(30, 178, 236);
+    overflow: hidden;
+    height: 75px;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: rgb(255, 246, 246);
+    color: black;
+}
+
+.topnav .icon {
+    display: none;
+}
+.logo-img { 
+    background-image: url(logo.png);
+    display: inline-block;
+    vertical-align: top;
+    width: 145px;
+    height: 50px;
+    margin-left: 430px;
+    margin-top: -5px;   
+  background-repeat: no-repeat;
+}
+
+h1
+{
+ 
+    text-align: center;
+    font-family: "Roboto";
+}
+table, th,td {
+    
+    margin: auto;
+    width: 50%;
+}
+#n{
+    width: 170px;
+}
+.myclass{
+    float: right;
+    width: 20px;
+    
+}
+.bu{
+    width: 200px;
+    height: 50px;
+    margin-left: 575px;
+    margin-top: 20px;
+}
+h1{
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  table{
+    width:100%;
+    table-layout: fixed;
+  }
+  .tbl-header{
+    background-color: rgba(255,255,255,0.3);
+    border-width: thin;
+    /* margin-top: -80px; */
+   }
+  .tbl-content{
+    height:300px;
+    overflow-x:auto;
+    margin-top: 0px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-width: thin;
+  }
+  th{
+    padding: 20px 15px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 12px;
+    color: rgb(15, 13, 13);
+    text-transform: uppercase;
+  }
+  td{
+    padding: 15px;
+    text-align: left;
+    vertical-align:middle;
+    font-weight: 300;
+    font-size: 12px;
+    color: rgb(17, 16, 16);
+    border-bottom: solid 1px rgba(255,255,255,0.1);
+  }
+  
+  
+  /* demo styles */
+  
+  @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+  body{
+    background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+    background: linear-gradient(to right, #25c481, #25b7c4);
+    font-family: 'Roboto', sans-serif;
+    height: 550px;
+  }
+  section{
+    margin: 50px;
+  }
+  
+  
+ #t{
+    font-weight: 1000;
+ }
+ .bu{
+
+    position: relative;
+
+    display: block;
+    margin: 30px auto;
+    padding: 0;
+
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    
+    background-color: #2ecc71;
+    color: #ecf0f1;
+    
+  
+ }
+  
+  body{
+    background-color: #2ecc71;
+    width:100%;
+    height: 800px;
+    min-width:600px;
+    max-width:2000px;
+    margin-top: -10px;
+    margin-left: 0px;
+    
+  }

@@ -1,0 +1,23 @@
+<div>
+<li *ngFor = 'let i1 of data'>
+
+<p id="one">
+  Course Name : {{i1.coursename}}
+</p>
+<p id="two">
+  Course Duration : 20-01-2018 To 20-03-2018
+</p>
+
+<p id="five">
+Course Handeled : {{i1.faculty}}
+</p>
+<p id="three">
+  
+   Course Topics : {{i1.coursedisc}}
+</p>
+
+<p id="four">Course Fee : {{i1.coursefee}}</p>
+</li>
+
+<button class="button" [routerLink] = "['/payment']"><span>Add Course </span></button>
+</div>

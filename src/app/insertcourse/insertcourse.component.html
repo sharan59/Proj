@@ -1,0 +1,51 @@
+<form #course='ngForm' (ngSubmit)=transfer(course.value)>
+  <input type="text" placeholder="CourseName" name="coursename" ngModel>
+  <input type="text" placeholder="Faculty" name="faculty" ngModel>
+  <input type="text" placeholder="CourseDescription" name="coursedisc" ngModel>
+  <input type="text" placeholder="CourseFee" name="coursefee" ngModel>
+  <input type="submit" value="AddCourse">
+  
+  
+  </form>
+  <style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 55%;
+    }
+    
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+    button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 10px;
+}
+    </style>
+  <table>
+    <tr>
+      <th>coursename </th>
+      <th>faculty </th>  
+      <th>coursefee </th>
+      
+    </tr>
+    <tr *ngFor="let reg of adata ; let in=index">  
+      <td>{{reg.coursename}}</td>
+    <td>{{reg.faculty}}</td>
+    <td>{{reg.coursefee}} <button (click)='deleteData(reg.coursename,in)' >Delete</button></td> 
+    </tr> 
+    </table>

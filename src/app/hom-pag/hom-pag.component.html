@@ -1,0 +1,69 @@
+<body>
+
+
+
+ <div class="titl">
+<h1>welcome to course registration </h1>
+<br>
+<!-- <div >
+  <table >
+    <tr>
+      <th  (click)="sort('CategoryID')"> CategoryID</th>
+        <th (click)="sort('CategoryName')" >CategoryName</th>
+          <th  (click)="sort('Description')" >Description</th>
+    </tr>
+    <tr *ngFor="let item of  records | search: searchText 
+    | sort: {property: column, direction: direction}">
+      <td>{{item.CategoryID}}</td>
+      <td>{{item.CategoryName}}</td>
+      <td>{{item.Description}}</td>
+    </tr>
+  </table>
+</div> -->
+
+<input type="text" class="form-control" [(ngModel)]="searchText" placeholder="search">
+</div> 
+
+
+
+<div class="user">
+
+  <div class="lab">
+  <ul>
+      <li><a >Courses</a></li>
+      <li><a id=a routerLink="jav">java</a></li>
+     
+      <li><a routerLink="mea">MeanStack</a></li>
+      <li><a href="#st">SoftwareTesting</a></li>
+      <li><a href="#react">React</a></li>
+      <li><a href="#android">Android</a></li>
+      
+    </ul>
+
+
+    <div style="margin-left:25%;padding:1px 16px;height:1300px;" id="content">
+        <h2>Select A Course To View</h2>
+       
+       
+        <router-outlet></router-outlet>
+        
+      </div>
+
+      </div>
+      <script type="text/javascript">
+
+        $(document).ready(function(){
+        $('a').click(function(e){
+        e.preventDefault();
+        $("#content").load($(this).attr('href'));
+        });
+        });
+        
+           </script>
+
+</div>
+
+<a id=a [routerLink] = "['/insertcourse']">InsertCourse</a>
+
+</body>
+
