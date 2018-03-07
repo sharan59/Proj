@@ -46,13 +46,6 @@ h1{
 }
 .fon{
     font-family: sans-serif;
-}
-.lec-img {
-    background-image: url(lec.png);
-    height: 270px;
-    width: 800px;
-    margin-left: 230px;
-
 } 
 .quo{
     width: 70%;
