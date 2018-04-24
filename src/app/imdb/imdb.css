@@ -1,0 +1,20 @@
+th,td{
+    padding:24px;
+}
+.paging{
+    display:flex;
+    flex-direction: row
+}
+.prev{
+
+}
+.next{
+
+}
+.pgno{
+border:2px solid black
+}
+.active{
+    background-color: blue;
+    color:white;
+}
