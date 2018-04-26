@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule} from '@angular/forms';
-import {RouterModule} from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpModule} from '@angular/http';
+import { HttpModule } from '@angular/http';
 
 
 import { AppComponent } from './app.component';
@@ -17,6 +17,7 @@ import { PayFormComponent } from './pay-form/pay-form.component';
 import { ExpComponent } from './exp/exp.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
+import { ImdbComponent } from './imdb/imdb';
 
 import { CategoryPipe } from './category.pipe';
 import { OrderByPipe } from './order-by.pipe';
@@ -38,37 +39,40 @@ import { InsertcourseComponent } from './insertcourse/insertcourse.component';
     PayFormComponent,
     ExpComponent,
     PageNotFoundComponent,
-  
+    ImdbComponent,
     CategoryPipe,
     OrderByPipe,
     JavconComponent,
     MeancComponent,
     InsertcourseComponent,
-   
+
   ],
   imports: [
-    BrowserModule,FormsModule,ReactiveFormsModule,HttpModule,
-    RouterModule.forRoot([{path:'api/login',component:LogFormComponent},
-                          {path:'api/signup',component:RegFormComponent},
-                          {path:'contactus',component:ContactPageComponent},
-                          {path:'aboutus',component:AboutPageComponent},
-                          {path:'home',component:MainHomeComponent},
-                          {path:'courseselection',component:HomPagComponent,
-                          children :[{path:'jav',component:JavconComponent},{path:'mea',component:MeancComponent},
-                        ]},
-                          {path:'insertcourse',component:InsertcourseComponent},
-                          {path:'payment',component:ExpComponent},
-                         {path:'',redirectTo:'home',pathMatch:'full'},
-                          { path: '**', component: PageNotFoundComponent } ])
-                          // {path:'kk',component:AppComponent},
-                          // {path:'',redirectTo:'home',pathMatch:'full'},
-                          // {path:'**',redirectTo:'404'},
-                          // {path:'404',component:PageNotFoundComponent}, 
+    BrowserModule, FormsModule, ReactiveFormsModule, HttpModule,
+    RouterModule.forRoot([{ path: 'api/login', component: LogFormComponent },
+    { path: 'api/signup', component: RegFormComponent },
+    { path: 'contactus', component: ContactPageComponent },
+    { path: 'aboutus', component: AboutPageComponent },
+    { path: 'home', component: MainHomeComponent },
+    { path: 'imdb', component: ImdbComponent },
+    {
+      path: 'courseselection', component: HomPagComponent,
+      children: [{ path: 'jav', component: JavconComponent }, { path: 'mea', component: MeancComponent },
+      ]
+    },
+    { path: 'insertcourse', component: InsertcourseComponent },
+    { path: 'payment', component: ExpComponent },
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: '**', component: PageNotFoundComponent }])
+    // {path:'kk',component:AppComponent},
+    // {path:'',redirectTo:'home',pathMatch:'full'},
+    // {path:'**',redirectTo:'404'},
+    // {path:'404',component:PageNotFoundComponent}, 
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
+export class AppModule {
 
 
 
